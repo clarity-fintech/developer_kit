@@ -11,6 +11,9 @@ The CLRTY-1 Developer Kit is a full-stack toolkit for builders who want to creat
 Start here:
 
 - **Full Developer Kit ZIP:** [`dist/developer-kit-full.zip`](dist/developer-kit-full.zip)
+- **Live SDK Downloads:** [`dist/live-sdk-downloads.zip`](dist/live-sdk-downloads.zip)
+- **PRISM CLI Account Access Pack:** [`dist/prism-cli-account-access-pack.zip`](dist/prism-cli-account-access-pack.zip)
+- **Mastermind First Access Pack:** [`dist/mastermind-first-access-pack.zip`](dist/mastermind-first-access-pack.zip)
 - **Checksums:** [`dist/SHA256SUMS.txt`](dist/SHA256SUMS.txt)
 - **Download index:** [`DOWNLOADS.md`](DOWNLOADS.md)
 - **Git clone:** `git clone https://github.com/clarity-fintech/developer_kit.git`

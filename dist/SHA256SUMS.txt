@@ -1,1 +1,4 @@
-c3e48354fda999ac3bbff3f2622b47478fe9ccad7a6d6ad6550a9cd3780a6632  developer-kit-full.zip
+aa1f89ce0369094bf2452e61c0d19f6affef75a6a0d196fe20f28521451351a6  developer-kit-full.zip
+93ad358247e07075a3baf9d09f754edd05d5fe416e6466898ca9acc54b943ea6  live-sdk-downloads.zip
+e3a86d56cdb5a691bcea9708f4dc81aef64eefe4dcc878ae136cafe4556fd825  mastermind-first-access-pack.zip
+4a25fc4c1328c2ed87ab5b977dde8bf3e8144fa3a1a411c840bf7d35df7ac2dd  prism-cli-account-access-pack.zip
