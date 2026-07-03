@@ -6,6 +6,15 @@ The CLRTY-1 Developer Kit is a full-stack toolkit for builders who want to creat
 
 > From zero to production-ready infrastructure.
 
+## Downloads
+
+Start here:
+
+- **Full Developer Kit ZIP:** [`dist/developer-kit-full.zip`](dist/developer-kit-full.zip)
+- **Checksums:** [`dist/SHA256SUMS.txt`](dist/SHA256SUMS.txt)
+- **Download index:** [`DOWNLOADS.md`](DOWNLOADS.md)
+- **Git clone:** `git clone https://github.com/clarity-fintech/developer_kit.git`
+
 ## Core Philosophy
 
 Developers should not adapt to infrastructure. Infrastructure should adapt to developers.
