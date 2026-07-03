@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CLRTY-1 Chain Spec — Clarity Fortress</title>
+  <link rel="stylesheet" href="../labs.css" />
+</head>
+<body class="labs-page">
+  <header class="labs-hero">
+    <h1>CLRTY-1</h1>
+    <p>Sovereign L1 · chainId <code>clrty-1</code> / <code>1202</code> · denom <code>uclrty</code> (9 decimals)</p>
+    <nav class="labs-nav"><a href="../index.html">← Fortress</a></nav>
+  </header>
+  <article class="labs-step-card">
+    <h2>Public endpoints (CLRTY-1 only)</h2>
+    <ul>
+      <li>RPC: <code>https://rpc.clarity-fintech.com</code></li>
+      <li>REST: <code>https://api.clrty.dev</code></li>
+      <li>Explorer: <code>https://explorer.clarity-fintech.com</code></li>
+    </ul>
+    <p>Full spec: <a href="../../../docs/chain/clrty-1.md">docs/chain/clrty-1.md</a></p>
+    <h2>Security (MDA / FMA)</h2>
+    <p><a href="../../../docs/security/CLRTY1_MDA.md">CLRTY1 MDA</a> · <a href="../../../docs/chain/clrty-1-fma.md">FMA matrix</a></p>
+    <button id="mda-btn" class="labs-step-action" type="button">MDA preview</button>
+    <button id="status-btn" class="labs-step-action" type="button">Live status</button>
+    <pre id="out" style="color:#94a3b8;font-size:0.85rem"></pre>
+  </article>
+  <script src="../../shared/labs-api.js"></script>
+  <script>
+    document.getElementById('status-btn').onclick = async () => {
+      document.getElementById('out').textContent = JSON.stringify(await ClarityLabsApi.getStatus(), null, 2);
+    };
+    document.getElementById('mda-btn').onclick = async () => {
+      const res = await fetch(ClarityLabsApi.restBase + '/v1/security/mda/preview', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ entropy: 0.5, saturation: 0.3 }),
+      });
+      document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+    };
+  </script>
+</body>
+</html>

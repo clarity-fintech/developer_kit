@@ -1,0 +1,10 @@
+{
+  "id": "clarity-docs",
+  "description": "Documentation",
+  "monorepo_paths": [
+    "docs/",
+    "clarity-wallet/docs/",
+    "frontend/docs/"
+  ],
+  "virtual_org": "clarity-labs"
+}

@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "namespace": "wallet_environments",
+  "note": "Machine-readable wallet type profiles and Wallet Finder capability flags",
+  "environments": [
+    {
+      "id": "env-core",
+      "slug": "core",
+      "name": "Core Wallet",
+      "section_id": "WAL-01",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": false,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": false,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env"],
+      "cluster_support": ["localhost", "devnet", "testnet"]
+    },
+    {
+      "id": "env-mobile",
+      "slug": "mobile",
+      "name": "Mobile Wallet",
+      "section_id": "WAL-02",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": true,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env"],
+      "cluster_support": ["mainnet", "devnet", "testnet"]
+    },
+    {
+      "id": "env-pro",
+      "slug": "pro",
+      "name": "Pro Trader Wallet",
+      "section_id": "WAL-03",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": true,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": false,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env", "safe"],
+      "cluster_support": ["mainnet", "devnet"]
+    },
+    {
+      "id": "env-multisig",
+      "slug": "multisig",
+      "name": "Multisig Safe Wallet",
+      "section_id": "WAL-04",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": false,
+        "multisig": true,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": false,
+        "nft_assets": false
+      },
+      "signer_backends": ["safe"],
+      "cluster_support": ["mainnet", "devnet"]
+    },
+    {
+      "id": "env-autonomous",
+      "slug": "autonomous",
+      "name": "Autonomous Agent Wallet",
+      "section_id": "WAL-05",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": true,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": true,
+        "custody_mpc": false,
+        "commerce_checkout": true,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env"],
+      "cluster_support": ["devnet", "testnet", "localhost"]
+    },
+    {
+      "id": "env-dev",
+      "slug": "dev",
+      "name": "Developer Wallet",
+      "section_id": "WAL-06",
+      "capabilities": {
+        "moniversion": false,
+        "helix_routing": true,
+        "nsd_peg": false,
+        "kya_identity": false,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": false,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env"],
+      "cluster_support": ["localhost", "devnet", "testnet"]
+    },
+    {
+      "id": "env-embedded",
+      "slug": "embedded",
+      "name": "Embedded SDK Wallet",
+      "section_id": "WAL-07",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": true,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env"],
+      "cluster_support": ["mainnet", "devnet"]
+    },
+    {
+      "id": "env-enterprise",
+      "slug": "enterprise",
+      "name": "Enterprise Wallet",
+      "section_id": "WAL-08",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": true,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": true,
+        "autonomous_agent": false,
+        "custody_mpc": true,
+        "commerce_checkout": true,
+        "nft_assets": true
+      },
+      "signer_backends": ["safe", "env"],
+      "cluster_support": ["mainnet"]
+    },
+    {
+      "id": "env-custody",
+      "slug": "custody",
+      "name": "Institutional Custody",
+      "section_id": "WAL-09",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": false,
+        "multisig": true,
+        "autonomous_agent": false,
+        "custody_mpc": true,
+        "commerce_checkout": false,
+        "nft_assets": true
+      },
+      "signer_backends": ["safe"],
+      "cluster_support": ["mainnet"]
+    },
+    {
+      "id": "env-identity",
+      "slug": "identity",
+      "name": "Identity Wallet",
+      "section_id": "WAL-10",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": false,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": false,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env", "safe"],
+      "cluster_support": ["mainnet", "devnet"]
+    },
+    {
+      "id": "env-commerce",
+      "slug": "commerce",
+      "name": "Commerce Wallet",
+      "section_id": "WAL-11",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": true,
+        "nsd_peg": true,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": true,
+        "nft_assets": false
+      },
+      "signer_backends": ["memory", "env"],
+      "cluster_support": ["mainnet", "devnet"]
+    },
+    {
+      "id": "env-nft",
+      "slug": "nft",
+      "name": "NFT Asset Wallet",
+      "section_id": "WAL-12",
+      "capabilities": {
+        "moniversion": true,
+        "helix_routing": false,
+        "nsd_peg": false,
+        "kya_identity": true,
+        "gas_abstraction": true,
+        "multisig": false,
+        "autonomous_agent": false,
+        "custody_mpc": false,
+        "commerce_checkout": false,
+        "nft_assets": true
+      },
+      "signer_backends": ["memory", "env", "safe"],
+      "cluster_support": ["mainnet", "devnet"]
+    }
+  ],
+  "finder_primitives": [
+    "moniversion",
+    "helix_routing",
+    "nsd_peg",
+    "kya_identity",
+    "gas_abstraction",
+    "multisig",
+    "autonomous_agent",
+    "custody_mpc",
+    "commerce_checkout",
+    "nft_assets"
+  ]
+}

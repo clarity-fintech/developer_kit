@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "namespace": "clarity_rpc",
+  "clusters": {
+    "mainnet": {
+      "http": "https://api.mainnet.clarity.com",
+      "ws": "wss://api.mainnet.clarity.com"
+    },
+    "devnet": {
+      "http": "https://api.devnet.clarity.com",
+      "ws": "wss://api.devnet.clarity.com"
+    },
+    "testnet": {
+      "http": "https://api.testnet.clarity.com",
+      "ws": "wss://api.testnet.clarity.com"
+    },
+    "localhost": {
+      "http": "http://localhost:8899",
+      "ws": "ws://localhost:8900"
+    }
+  },
+  "commitment_levels": [
+    "processed",
+    "confirmed",
+    "finalized"
+  ],
+  "methods": [
+    {
+      "name": "getBalance",
+      "group": "RPC-01",
+      "handler": "account_balance",
+      "commitment_support": true,
+      "params": [
+        "address",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getAccountInfo",
+      "group": "RPC-01",
+      "handler": "account_info",
+      "commitment_support": true,
+      "params": [
+        "address",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getMultipleAccounts",
+      "group": "RPC-01",
+      "handler": "multiple_accounts",
+      "commitment_support": true,
+      "params": [
+        "pubkeys",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getTokenAccountsByOwner",
+      "group": "RPC-01",
+      "handler": "token_accounts_by_owner",
+      "commitment_support": true,
+      "params": [
+        "owner",
+        "mint",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getLargestAccounts",
+      "group": "RPC-01",
+      "handler": "largest_accounts",
+      "commitment_support": true,
+      "params": [
+        "commitment"
+      ]
+    },
+    {
+      "name": "getMinimumBalanceForRentExemption",
+      "group": "RPC-01",
+      "handler": "rent_exemption",
+      "commitment_support": false,
+      "params": [
+        "dataLength"
+      ]
+    },
+    {
+      "name": "sendTransaction",
+      "group": "RPC-02",
+      "handler": "send_transaction",
+      "commitment_support": false,
+      "params": [
+        "transaction"
+      ]
+    },
+    {
+      "name": "getTransaction",
+      "group": "RPC-02",
+      "handler": "get_transaction",
+      "commitment_support": true,
+      "params": [
+        "signature",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getSignaturesForAddress",
+      "group": "RPC-02",
+      "handler": "signatures_for_address",
+      "commitment_support": true,
+      "params": [
+        "address",
+        "limit",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getConfirmedSignaturesForAddress2",
+      "group": "RPC-02",
+      "handler": "confirmed_signatures",
+      "commitment_support": true,
+      "params": [
+        "address",
+        "limit",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getFeeForMessage",
+      "group": "RPC-02",
+      "handler": "fee_for_message",
+      "commitment_support": false,
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "name": "requestAirdrop",
+      "group": "RPC-02",
+      "handler": "request_airdrop",
+      "commitment_support": false,
+      "params": [
+        "address",
+        "amount"
+      ]
+    },
+    {
+      "name": "getBlock",
+      "group": "RPC-03",
+      "handler": "get_block",
+      "commitment_support": true,
+      "params": [
+        "slot",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getBlocks",
+      "group": "RPC-03",
+      "handler": "get_blocks",
+      "commitment_support": true,
+      "params": [
+        "startSlot",
+        "endSlot",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getBlockHeight",
+      "group": "RPC-03",
+      "handler": "get_block_height",
+      "commitment_support": true,
+      "params": [
+        "commitment"
+      ]
+    },
+    {
+      "name": "getBlockTime",
+      "group": "RPC-03",
+      "handler": "get_block_time",
+      "commitment_support": true,
+      "params": [
+        "slot"
+      ]
+    },
+    {
+      "name": "getLatestBlockhash",
+      "group": "RPC-03",
+      "handler": "recent_blockhash",
+      "commitment_support": true,
+      "params": [
+        "commitment"
+      ]
+    },
+    {
+      "name": "getSlot",
+      "group": "RPC-03",
+      "handler": "get_slot",
+      "commitment_support": true,
+      "params": [
+        "commitment"
+      ]
+    },
+    {
+      "name": "getSlotLeader",
+      "group": "RPC-03",
+      "handler": "get_slot_leader",
+      "commitment_support": true,
+      "params": [
+        "slot"
+      ]
+    },
+    {
+      "name": "getProgramAccounts",
+      "group": "RPC-04",
+      "handler": "program_accounts",
+      "commitment_support": true,
+      "params": [
+        "programId",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getInflationReward",
+      "group": "RPC-04",
+      "handler": "inflation_reward",
+      "commitment_support": true,
+      "params": [
+        "addresses",
+        "epoch"
+      ]
+    },
+    {
+      "name": "getTokenSupply",
+      "group": "RPC-05",
+      "handler": "token_supply",
+      "commitment_support": true,
+      "params": [
+        "mint",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getTokenAccountBalance",
+      "group": "RPC-05",
+      "handler": "token_balance",
+      "commitment_support": true,
+      "params": [
+        "tokenAccount",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getTokenLargestAccounts",
+      "group": "RPC-05",
+      "handler": "token_largest_accounts",
+      "commitment_support": true,
+      "params": [
+        "mint",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getParsedTokenAccountsByOwner",
+      "group": "RPC-05",
+      "handler": "token_accounts_by_owner",
+      "commitment_support": true,
+      "params": [
+        "owner",
+        "mint",
+        "commitment"
+      ]
+    },
+    {
+      "name": "getSupply",
+      "group": "RPC-05",
+      "handler": "get_supply",
+      "commitment_support": true,
+      "params": [
+        "commitment"
+      ]
+    },
+    {
+      "name": "getClusterNodes",
+      "group": "RPC-06",
+      "handler": "cluster_nodes",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getEpochInfo",
+      "group": "RPC-06",
+      "handler": "epoch_info",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getEpochSchedule",
+      "group": "RPC-06",
+      "handler": "epoch_schedule",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getHealth",
+      "group": "RPC-06",
+      "handler": "health",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getIdentity",
+      "group": "RPC-06",
+      "handler": "identity",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getVersion",
+      "group": "RPC-06",
+      "handler": "version",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "simulateTransaction",
+      "group": "RPC-07",
+      "handler": "simulate_transaction",
+      "commitment_support": false,
+      "params": [
+        "transaction",
+        "options"
+      ]
+    },
+    {
+      "name": "getRecentPerformanceSamples",
+      "group": "RPC-07",
+      "handler": "performance_samples",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getFees",
+      "group": "RPC-08",
+      "handler": "get_fees",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "getRecentPrioritizationFees",
+      "group": "RPC-08",
+      "handler": "prioritization_fees",
+      "commitment_support": false,
+      "params": []
+    },
+    {
+      "name": "get_set_status",
+      "group": "RPC-09",
+      "handler": "set_status",
+      "commitment_support": false,
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "name": "getBridgeStatus",
+      "group": "RPC-10",
+      "handler": "bridge_status",
+      "commitment_support": false,
+      "params": []
+    }
+  ],
+  "subscriptions": [
+    {
+      "name": "accountSubscribe",
+      "handler": "accountsubscribe"
+    },
+    {
+      "name": "programSubscribe",
+      "handler": "programsubscribe"
+    },
+    {
+      "name": "signatureSubscribe",
+      "handler": "signaturesubscribe"
+    },
+    {
+      "name": "slotSubscribe",
+      "handler": "slotsubscribe"
+    },
+    {
+      "name": "slotsUpdatesSubscribe",
+      "handler": "slotsupdatessubscribe"
+    },
+    {
+      "name": "blockSubscribe",
+      "handler": "blocksubscribe"
+    },
+    {
+      "name": "logsSubscribe",
+      "handler": "logssubscribe"
+    },
+    {
+      "name": "logsUnsubscribe",
+      "handler": "logsunsubscribe"
+    }
+  ]
+}

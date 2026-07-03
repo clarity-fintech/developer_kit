@@ -1,0 +1,87 @@
+# CLRTY / CLARITY — LLM entry point
+# https://github.com/clrty-network/clrty-project
+
+> Sovereign L1 clrty-1 · capital intelligence · Quantum Skills · HELIX hidden exchange
+
+## Start here
+
+- Architecture hub: docs/architecture/README.md
+- Diagram system (blueprints): docs/diagrams/README.md
+- Documentation index: docs/README.md
+- Nexus federation: docs/architecture/NEXUS_REPOSITORY.md
+- Launch stages: docs/launch/LAUNCH_STAGES.md
+- 100-step map: docs/launch/NANO_ORGANIZATION_100.md
+- Clarity Fortress Library: docs/DEV_LABS_LIBRARY.md
+- Launch task snapshot: var/launch/launch_tasks_snapshot.json (make launch-tasks-build)
+- Notion launch tracker: docs/monetization/NOTION_LAUNCH_TRACKER_SETUP.md
+- Repo map: docs/architecture/REPO_MAP.md
+- Notion launch strategy: docs/simulation/CLRTY_Live_Market_Notion.md
+
+## Operator CLI
+
+- Install: frontend/docs/content/build/installation.md
+- Skills: docs/investor/clarity_skills_overview.md
+- Execution funnel: docs/cli/execution_funnel.md
+
+## Manifests (SHA-256 indexed)
+
+- Index: manifests/MANIFEST_INDEX.json
+- Genesis: CLRTY_SUBSTRATE/boot/genesis_entropy.json
+- Tokenomics: CLRTY_SUBSTRATE/boot/tokenomics_manifest.json
+- Quantum Skills: CLRTY_SUBSTRATE/boot/quant_skills_manifest.json
+- HELIX: CLRTY_SUBSTRATE/boot/helix_manifest.json
+- Products suite: CLRTY_SUBSTRATE/boot/products_suite_manifest.json
+
+## Verify (from repo root)
+
+make init-nexus
+make audit-verify
+make test-system
+make gate-check
+
+## Day cycle
+
+make day-cycle-morning
+make day-cycle-afternoon
+make day-cycle
+make capital-execution-cycle
+clrty sys test morning --tier standard
+clrty sys test afternoon
+clrty helix capital cycle --tier=core
+
+Handoff: docs/launch/DAY_CYCLE_HANDOFF.md
+Capital stack: docs/arbitrage/capital_execution_stack.md
+Live spot: docs/arbitrage/live_spot_orders.md
+Manifest: manifests/capital_execution_stack.json
+
+make live-market-pull
+make live-spot-keep-alive
+clrty helix market pull
+clrty helix orders place-all
+clrty helix orders keep-alive
+
+## Platform integrations (100 rails)
+
+make platform-registry
+make platform-probe
+make platform-sync
+clrty platform list
+clrty platform probe --all
+
+Index: docs/integration/PLATFORM_RAILS_INDEX.md
+Manifest: CLRTY_SUBSTRATE/boot/platform_integrations_manifest.json
+
+## Skills catalog
+
+- Machine JSON: CLRTY_SUBSTRATE/boot/clarity_skills_catalog.json
+- Nano N01–N20: CLRTY_SUBSTRATE/boot/nano_skills_manifest.json
+
+## Plans (read-only references)
+
+- HELIX integration: docs/launch/PLANS_INDEX.md
+- Public website: deferred — docs/l1_launch/DEFERRED_PUBLIC_WEBSITE.md
+
+## Investor (gated)
+
+- Data room: docs/investor/INVESTOR_DATA_ROOM_INDEX.md
+- Treasury HUD: frontend/investor/ (not public marketing)

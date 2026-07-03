@@ -1,0 +1,98 @@
+{
+  "updated": "2026-07-02",
+  "api_base": "https://api.clarity-fintech.com",
+  "products": [
+    {
+      "system_id": "daas_tier1",
+      "name": "DaaS-Core Institutional",
+      "price_display": "$3,000/mo",
+      "checkout_url": "https://buy.stripe.com/aFacN52Ap4c2eLl19G1Fe09",
+      "api_routes": [
+        "POST /v1/monetization/daas/quote"
+      ],
+      "entitlement": "daas_tier1"
+    },
+    {
+      "system_id": "telemetry_edge",
+      "name": "Telemetry-X Edge",
+      "price_display": "$5,000/mo",
+      "checkout_url": "https://buy.stripe.com/cNi6oHcaZgYOfPpg4A1Fe0a",
+      "api_routes": [
+        "GET /v1/alpha/telemetry"
+      ],
+      "entitlement": "telemetry_edge"
+    },
+    {
+      "system_id": "exec_sniper",
+      "name": "Exec-Sniper API",
+      "price_display": "$1,000/mo + usage",
+      "checkout_url": "https://buy.stripe.com/eVq8wP7UJfUKfPp6u01Fe0b",
+      "api_routes": [
+        "POST /v1/sniper/quote",
+        "POST /v1/sniper/execute",
+        "GET /v1/sniper/status/:trade_id"
+      ],
+      "entitlement": "exec_sniper"
+    },
+    {
+      "system_id": "node_sovereign",
+      "name": "Node Sovereign Consortium",
+      "price_display": "$20,000/yr",
+      "checkout_url": "https://buy.stripe.com/00wdR97UJ23UcDddWs1Fe0c",
+      "api_routes": [
+        "POST /v1/monetization/node/register"
+      ],
+      "entitlement": "node_sovereign"
+    },
+    {
+      "system_id": "sdk_enterprise",
+      "name": "SDK Enterprise License",
+      "price_display": "$10,000/yr",
+      "checkout_url": "https://buy.stripe.com/3cI6oHcaZcIyav5g4A1Fe0d",
+      "api_routes": [
+        "entitlement:sdk_enterprise"
+      ],
+      "entitlement": "sdk_enterprise"
+    },
+    {
+      "system_id": "predictive_intel",
+      "name": "Predictive Intelligence SaaS",
+      "price_display": "$4,000/mo",
+      "checkout_url": "https://buy.stripe.com/6oU5kDgrf5g6fPp5pW1Fe0e",
+      "api_routes": [
+        "POST /v1/alpha/inference/score"
+      ],
+      "entitlement": "predictive_intel"
+    },
+    {
+      "system_id": "x402_metered",
+      "name": "x402 API Metered",
+      "price_display": "$20/mo + usage",
+      "checkout_url": "https://buy.stripe.com/00w4gz8YNfUKbz99Gc1Fe0g",
+      "api_routes": [
+        "POST /v1/intelligence/x402/quote"
+      ],
+      "entitlement": "x402_metered"
+    },
+    {
+      "system_id": "private_rpc",
+      "name": "Private RPC / MEV",
+      "price_display": "$2,000/mo",
+      "checkout_url": "https://buy.stripe.com/6oUbJ1a2R6kafPp8C81Fe0h",
+      "api_routes": [
+        "GET /v1/helix/status"
+      ],
+      "entitlement": "private_rpc"
+    },
+    {
+      "system_id": "node_free",
+      "name": "Node Free (dev)",
+      "price_display": "$0",
+      "api_routes": [
+        "POST /v1/monetization/node/register"
+      ],
+      "entitlement": "node_free",
+      "register_url": "https://clarity-fintech.com/labs/checkout/#node_free"
+    }
+  ]
+}

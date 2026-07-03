@@ -1,0 +1,9 @@
+{
+  "id": "clarity-data",
+  "description": "Data aggregation",
+  "monorepo_paths": [
+    "clrty-intelligence/",
+    "data_lake_pipeline/"
+  ],
+  "virtual_org": "clarity-labs"
+}

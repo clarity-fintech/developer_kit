@@ -1,0 +1,10 @@
+{
+  "id": "clarity-api",
+  "description": "Public APIs",
+  "monorepo_paths": [
+    "clrty-api/",
+    "clrty-rpc/",
+    "clrty-dx/"
+  ],
+  "virtual_org": "clarity-labs"
+}

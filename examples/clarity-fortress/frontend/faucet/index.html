@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clarity Fortress Faucet</title>
+  <link rel="stylesheet" href="../labs.css" />
+</head>
+<body class="labs-page">
+  <header class="labs-hero">
+    <h1>Faucet</h1>
+    <p>FMA-governed test funds — CLRTY-1 dev clusters only (not mainnet).</p>
+    <nav class="labs-nav"><a href="../index.html">← Fortress</a></nav>
+  </header>
+  <main>
+    <p id="wallet-status" style="color:#94a3b8">Wallet: not connected</p>
+    <button id="connect-btn" class="labs-step-action" type="button">Connect (stub)</button>
+    <label>Address <input id="faucet-addr" type="text" style="width:100%;padding:0.5rem;margin:0.5rem 0" placeholder="pubkey or address" /></label>
+    <button id="faucet-btn" class="labs-step-action" type="button">Request airdrop</button>
+    <pre id="faucet-out" style="margin-top:1rem;color:#94a3b8;font-size:0.85rem"></pre>
+  </main>
+  <script src="../../shared/labs-wallet-stub.js"></script>
+  <script src="../../shared/labs-api.js"></script>
+  <script>
+    document.getElementById('connect-btn').onclick = async function () {
+      const { address } = await LabsWalletStub.connect();
+      document.getElementById('wallet-status').textContent = LabsWalletStub.statusLabel();
+      document.getElementById('faucet-addr').value = address;
+    };
+    document.getElementById('faucet-btn').onclick = async function () {
+      const addr = document.getElementById('faucet-addr').value.trim();
+      const out = document.getElementById('faucet-out');
+      try {
+        out.textContent = JSON.stringify(await ClarityLabsApi.requestAirdrop(addr), null, 2);
+      } catch (e) {
+        out.textContent = String(e);
+      }
+    };
+  </script>
+</body>
+</html>

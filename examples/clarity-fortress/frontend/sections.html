@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clarity Fortress — Sections</title>
+  <link rel="stylesheet" href="../labs.css" />
+</head>
+<body class="labs-page">
+  <header class="labs-hero">
+    <h1>Ecosystem sections</h1>
+    <p>Manifest-driven registry — CLRTY-1 mainnet probes only.</p>
+    <nav class="labs-nav"><a href="index.html">← Walkthrough</a> <a href="checkout/index.html">Checkout</a></nav>
+  </header>
+  <div id="sections-root" class="labs-sections-grid"></div>
+  <script src="../shared/labs-api.js"></script>
+  <script>
+    async function loadSections() {
+      const root = document.getElementById('sections-root');
+      let sections;
+      try {
+        sections = await ClarityLabsApi.getSections();
+      } catch (_) {
+        const r = await fetch('sections.json');
+        sections = await r.json();
+      }
+      const list = sections.sections || sections;
+      root.innerHTML = '';
+      list.forEach(function (s) {
+        const card = document.createElement('article');
+        card.className = 'labs-section-card';
+        card.innerHTML =
+          '<span class="labs-badge">' + (s.status || 'labs') + '</span>' +
+          '<h3>' + (s.name || s.id) + '</h3>' +
+          '<p>' + (s.description || '') + '</p>';
+        root.appendChild(card);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', loadSections);
+  </script>
+</body>
+</html>

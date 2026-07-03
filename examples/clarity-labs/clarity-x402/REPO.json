@@ -1,0 +1,9 @@
+{
+  "id": "clarity-x402",
+  "description": "Payment monetization",
+  "monorepo_paths": [
+    "settlement/",
+    "cortexpay_engine/"
+  ],
+  "virtual_org": "clarity-labs"
+}

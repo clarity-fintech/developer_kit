@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "chain_id": "clrty-1",
+  "numeric_chain_id": 1202,
+  "title": "Clarity Fortress Walkthrough",
+  "description": "Thirteen-step builder funnel for CLRTY-1 sovereign mainnet at dev.clrty.io/labs",
+  "steps": [
+    {
+      "id": 1,
+      "label": "Discover",
+      "section": "CLRTY-1 / Moniverse",
+      "description": "Read chain spec, PoC tuple, and genesis entropy. CLRTY-1 is the only execution network.",
+      "action": "status",
+      "actionLabel": "Fetch /v1/status",
+      "doc": "chain/index.html",
+      "sec_id": "SEC-01"
+    },
+    {
+      "id": 2,
+      "label": "Connect",
+      "section": "Clarity Wallet",
+      "description": "Connect wallet via adapter; add network chainId 1202 (9 decimals).",
+      "action": null,
+      "doc": "../../docs/consumer_wallet_guide.md",
+      "sec_id": "SEC-02"
+    },
+    {
+      "id": 3,
+      "label": "Fund",
+      "section": "Faucet",
+      "description": "Request test uclrty via FMA-governed faucet (non-mainnet clusters).",
+      "action": "airdrop",
+      "actionLabel": "requestAirdrop",
+      "sec_id": "SEC-03"
+    },
+    {
+      "id": 4,
+      "label": "Intent",
+      "section": "PRISM",
+      "description": "Submit structured intent JSON via clrt prism query.",
+      "doc": "../../clarity-prism-cli/README.md",
+      "sec_id": "SEC-04"
+    },
+    {
+      "id": 5,
+      "label": "Simulate",
+      "section": "PoC / EntropyBus",
+      "description": "Run simulateTransaction; review FMA vector and MLX toxicity score.",
+      "action": "simulate",
+      "actionLabel": "simulateTransaction",
+      "sec_id": "SEC-05"
+    },
+    {
+      "id": 6,
+      "label": "Execute",
+      "section": "HELIX",
+      "description": "Preview HELIX route and private mempool path.",
+      "action": "helix",
+      "actionLabel": "HELIX status",
+      "sec_id": "SEC-06"
+    },
+    {
+      "id": 7,
+      "label": "Prove",
+      "section": "ProofLab / DeSci",
+      "description": "Execution proof and replay hash from explorer.",
+      "doc": "explorer/index.html",
+      "sec_id": "SEC-07"
+    },
+    {
+      "id": 8,
+      "label": "Commit",
+      "section": "NSAL / Sets",
+      "description": "Query Set tier via GET /v1/sets/:address.",
+      "sec_id": "SEC-08"
+    },
+    {
+      "id": 9,
+      "label": "Skills",
+      "section": "Quantum Skills",
+      "description": "Run MCA/EHL skill modules from clrty CLI.",
+      "sec_id": "SEC-09"
+    },
+    {
+      "id": 10,
+      "label": "Govern",
+      "section": "Moniverse DAO",
+      "description": "Snapshot vote with FMA proposal gate.",
+      "sec_id": "SEC-10"
+    },
+    {
+      "id": 11,
+      "label": "Cross-chain",
+      "section": "Bridge monitor",
+      "description": "ETH bridge telemetry via Alchemy CLI — not L1 execution.",
+      "sec_id": "SEC-11"
+    },
+    {
+      "id": 12,
+      "label": "Launch",
+      "section": "Production verify",
+      "description": "Smoke public RPC getSlot and operational dashboard.",
+      "action": "slot",
+      "actionLabel": "getSlot",
+      "sec_id": "SEC-13"
+    },
+    {
+      "id": 13,
+      "label": "Register Node",
+      "section": "Node Governance (L06)",
+      "description": "Register a custom dev node (free tier) or sovereign tier after Stripe checkout. Persists to var/monetization/node_registry.json.",
+      "action": "nodeRegister",
+      "actionLabel": "Register node",
+      "doc": "../../docs/dev-portal/CUSTOM_NODE_ONBOARDING.md",
+      "sec_id": "SEC-14"
+    }
+  ]
+}

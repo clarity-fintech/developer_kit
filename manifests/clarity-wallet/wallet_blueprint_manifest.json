@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "product": "CLARITY WALLET (CUSTOM)",
+  "layers": [
+    "CVE",
+    "Moniversion",
+    "HELIX",
+    "KYA/Diamond Mind"
+  ],
+  "sdk_methods": [
+    "Execute",
+    "Predict",
+    "Identity"
+  ],
+  "theme": {
+    "background": "#0a0e14",
+    "accent": "#00e5ff"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "clarity-helix",
+  "description": "HELIX execution",
+  "monorepo_paths": [
+    "helix_engine/",
+    "arbitrage_core/"
+  ],
+  "virtual_org": "clarity-labs"
+}

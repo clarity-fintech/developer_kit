@@ -1,0 +1,8 @@
+{
+  "id": "clarity-examples",
+  "description": "Starter templates",
+  "monorepo_paths": [
+    "clarity-examples/"
+  ],
+  "virtual_org": "clarity-labs"
+}

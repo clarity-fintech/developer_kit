@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-07-03T19:00:41.058075+00:00",
+  "sources": [
+    {
+      "source": "docs/DEV_LABS_LIBRARY.md",
+      "destination": "docs/overview/DEV_LABS_LIBRARY.md"
+    },
+    {
+      "source": "docs/DOCUMENTATION_INDEX.md",
+      "destination": "docs/overview/DOCUMENTATION_INDEX.md"
+    },
+    {
+      "source": "docs/README.md",
+      "destination": "docs/overview/README.md"
+    },
+    {
+      "source": "llms.txt",
+      "destination": "docs/overview/llms.txt"
+    },
+    {
+      "source": "docs/developer_api.md",
+      "destination": "docs/api-reference/developer_api.md"
+    },
+    {
+      "source": "sdk/openapi/clrty-api.yaml",
+      "destination": "docs/api-reference/openapi/clrty-api.yaml"
+    },
+    {
+      "source": "sdk/proto/clrty_execution/v1/sniper.proto",
+      "destination": "docs/api-reference/proto/sniper.proto"
+    },
+    {
+      "source": "frontend/docs/content/build",
+      "destination": "docs/api-reference/build-docs"
+    },
+    {
+      "source": "docs/integration_guide.md",
+      "destination": "docs/guides/integration_guide.md"
+    },
+    {
+      "source": "docs/integration/third_party_onboarding.md",
+      "destination": "docs/guides/third_party_onboarding.md"
+    },
+    {
+      "source": "docs/dev-portal/IA.md",
+      "destination": "docs/guides/dev_portal_IA.md"
+    },
+    {
+      "source": "sdk/rust/clrty-client",
+      "destination": "sdk/rust/clrty-client"
+    },
+    {
+      "source": "sdk/typescript/index.ts",
+      "destination": "sdk/typescript/index.ts"
+    },
+    {
+      "source": "sdk/go/clrty",
+      "destination": "sdk/go/clrty"
+    },
+    {
+      "source": "sdk/python/clrty_client.py",
+      "destination": "sdk/python/clrty_client.py"
+    },
+    {
+      "source": "integration-package/sdk",
+      "destination": "sdk/integration-package"
+    },
+    {
+      "source": "clarity-wallet/README.md",
+      "destination": "wallet/README.md"
+    },
+    {
+      "source": "clarity-wallet/src",
+      "destination": "wallet/src"
+    },
+    {
+      "source": "clarity-wallet/wallet-integration",
+      "destination": "wallet/wallet-integration"
+    },
+    {
+      "source": "clarity-wallet/token-extensions",
+      "destination": "wallet/token-extensions"
+    },
+    {
+      "source": "docs/consumer_wallet_guide.md",
+      "destination": "wallet/consumer_wallet_guide.md"
+    },
+    {
+      "source": "clarity-examples",
+      "destination": "examples/clarity-examples"
+    },
+    {
+      "source": "clarity-labs",
+      "destination": "examples/clarity-labs"
+    },
+    {
+      "source": "frontend/labs",
+      "destination": "examples/clarity-fortress/frontend"
+    },
+    {
+      "source": "frontend/shared/labs-api.js",
+      "destination": "examples/clarity-fortress/shared/labs-api.js"
+    },
+    {
+      "source": "frontend/shared/labs-walkthrough.js",
+      "destination": "examples/clarity-fortress/shared/labs-walkthrough.js"
+    },
+    {
+      "source": "CLRTY_SUBSTRATE/boot/labs_manifest.json",
+      "destination": "manifests/labs_manifest.json"
+    },
+    {
+      "source": "CLRTY_SUBSTRATE/boot/clrty_rpc_methods_manifest.json",
+      "destination": "manifests/clrty_rpc_methods_manifest.json"
+    },
+    {
+      "source": "CLRTY_SUBSTRATE/boot/wallet_environments_manifest.json",
+      "destination": "manifests/wallet_environments_manifest.json"
+    },
+    {
+      "source": "clarity-wallet/manifests",
+      "destination": "manifests/clarity-wallet"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "clarity-core",
+  "description": "Blockchain + CVE",
+  "monorepo_paths": [
+    "CLRTY_SUBSTRATE/",
+    "state_manifold/",
+    "mvm_execution/"
+  ],
+  "virtual_org": "clarity-labs"
+}

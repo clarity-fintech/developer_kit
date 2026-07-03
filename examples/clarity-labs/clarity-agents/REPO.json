@@ -1,0 +1,9 @@
+{
+  "id": "clarity-agents",
+  "description": "Autonomous agents",
+  "monorepo_paths": [
+    "cortexpay_engine/",
+    "neuro_templates_engine/"
+  ],
+  "virtual_org": "clarity-labs"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "clarity-infra",
+  "description": "Infrastructure",
+  "monorepo_paths": [
+    ".github/workflows/",
+    "Makefile"
+  ],
+  "virtual_org": "clarity-labs"
+}

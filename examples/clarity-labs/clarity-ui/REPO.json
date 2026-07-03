@@ -1,0 +1,10 @@
+{
+  "id": "clarity-ui",
+  "description": "Frontend UI",
+  "monorepo_paths": [
+    "clrty-cli-ui/",
+    "clarity-wallet/app/",
+    "frontend/"
+  ],
+  "virtual_org": "clarity-labs"
+}

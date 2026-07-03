@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "protocol": "JSON-RPC 2.0",
+  "transport": {
+    "http": "POST application/json",
+    "websocket": "JSON-RPC over WS"
+  },
+  "clusters": {
+    "mainnet": {
+      "http": "https://api.mainnet.clarity.com",
+      "ws": "wss://api.mainnet.clarity.com"
+    },
+    "devnet": {
+      "http": "https://api.devnet.clarity.com",
+      "ws": "wss://api.devnet.clarity.com"
+    },
+    "testnet": {
+      "http": "https://api.testnet.clarity.com",
+      "ws": "wss://api.testnet.clarity.com"
+    },
+    "localhost": {
+      "http": "http://localhost:8899",
+      "ws": "ws://localhost:8900"
+    }
+  },
+  "commitment_levels": [
+    "processed",
+    "confirmed",
+    "finalized"
+  ],
+  "rate_limits": {
+    "public": "429/403 under load \u2014 dedicated RPC recommended"
+  },
+  "endpoint_local": "http://127.0.0.1:8545/rpc"
+}

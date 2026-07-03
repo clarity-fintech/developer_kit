@@ -1,0 +1,97 @@
+.labs-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #e8ecf4;
+  background: #0a0e17;
+  min-height: 100vh;
+}
+.labs-hero h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+.labs-hero p {
+  color: #94a3b8;
+  margin: 0 0 2rem;
+}
+.labs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.labs-nav a {
+  color: #7dd3fc;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.labs-nav a:hover {
+  border-color: #38bdf8;
+}
+.labs-step-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.labs-step-header h2 {
+  margin: 0.25rem 0;
+  font-size: 1.15rem;
+}
+.labs-step-num {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.labs-step-desc {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+.labs-step-action {
+  margin-top: 0.75rem;
+  background: #0ea5e9;
+  color: #0a0e17;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.labs-step-doc {
+  display: inline-block;
+  margin-left: 0.75rem;
+  color: #7dd3fc;
+  font-size: 0.85rem;
+}
+.labs-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.labs-section-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.labs-section-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+.labs-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: #1e3a5f;
+  color: #7dd3fc;
+}
+.labs-loading {
+  color: #94a3b8;
+}

@@ -1,0 +1,10 @@
+{
+  "id": "clarity-devtools",
+  "description": "CLI + debugger",
+  "monorepo_paths": [
+    "clarity-cli/",
+    "clrty-cli-core/",
+    "scripts/"
+  ],
+  "virtual_org": "clarity-labs"
+}

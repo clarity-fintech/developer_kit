@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playground — Clarity Fortress</title>
+  <link rel="stylesheet" href="../labs.css" />
+</head>
+<body class="labs-page">
+  <header class="labs-hero">
+    <h1>Playground</h1>
+    <p>Simulate before sign — CLRTY-1 only (chainId 1202, 9 decimals).</p>
+    <nav class="labs-nav"><a href="../index.html">← Fortress</a></nav>
+  </header>
+  <main class="labs-step-card">
+    <p id="wallet-status" style="color:#94a3b8">Wallet: not connected</p>
+    <button id="connect-btn" class="labs-step-action" type="button">Connect (stub)</button>
+    <label style="display:block;margin-top:1rem">Intent JSON
+      <textarea id="tx-json" rows="8" style="width:100%;font-family:monospace;font-size:0.85rem">{
+  "from": "labs-demo",
+  "to": "helix-router",
+  "amount": "1000000000"
+}</textarea>
+    </label>
+    <button id="simulate-btn" class="labs-step-action" type="button">simulateTransaction</button>
+    <button id="mda-btn" class="labs-step-action" type="button">MDA preview</button>
+    <pre id="sim-out" style="margin-top:1rem;color:#94a3b8;font-size:0.85rem"></pre>
+  </main>
+  <script src="../../shared/labs-wallet-stub.js"></script>
+  <script src="../../shared/labs-api.js"></script>
+  <script>
+    const statusEl = document.getElementById('wallet-status');
+    document.getElementById('connect-btn').onclick = async function () {
+      await LabsWalletStub.connect();
+      statusEl.textContent = LabsWalletStub.statusLabel();
+    };
+    document.getElementById('simulate-btn').onclick = async function () {
+      const out = document.getElementById('sim-out');
+      try {
+        const tx = JSON.parse(document.getElementById('tx-json').value);
+        if (LabsWalletStub.address) tx.from = LabsWalletStub.address;
+        const result = await ClarityLabsApi.simulateTransaction(tx);
+        out.textContent = JSON.stringify(result, null, 2);
+      } catch (e) {
+        out.textContent = String(e);
+      }
+    };
+    document.getElementById('mda-btn').onclick = async function () {
+      const out = document.getElementById('sim-out');
+      try {
+        out.textContent = JSON.stringify(await ClarityLabsApi.mdaPreview({ entropy: 0.5, saturation: 0.3 }), null, 2);
+      } catch (e) {
+        out.textContent = String(e);
+      }
+    };
+  </script>
+</body>
+</html>

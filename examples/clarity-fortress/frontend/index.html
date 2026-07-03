@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clarity Fortress — dev.clrty.io/labs</title>
+  <meta name="description" content="Clarity Fortress for CLRTY-1 sovereign L1 builders — walkthrough, faucet, explorer. Chain clrty-1 / 1202 only." />
+  <link rel="stylesheet" href="labs.css" />
+  <link rel="stylesheet" href="../shared/site-common.css" />
+</head>
+<body class="labs-page">
+  <header class="labs-hero">
+    <h1>Clarity Fortress</h1>
+    <p>Builder funnel for <strong>CLRTY-1 mainnet</strong> — rpc.clarity-fintech.com · chainId 1202 · uclrty (9 decimals)</p>
+    <nav class="labs-nav">
+      <a href="index.html">Walkthrough</a>
+      <a href="chain/index.html">Chain spec</a>
+      <a href="playground/index.html">Playground</a>
+      <a href="faucet/index.html">Faucet</a>
+      <a href="explorer/index.html">Explorer</a>
+      <a href="sections.html">Sections</a>
+      <a href="checkout/index.html">Monetization checkout</a>
+    </nav>
+  </header>
+  <main id="labs-walkthrough"></main>
+  <script src="../shared/labs-api.js"></script>
+  <script src="../shared/labs-walkthrough.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initLabsWalkthrough('labs-walkthrough');
+    });
+  </script>
+</body>
+</html>

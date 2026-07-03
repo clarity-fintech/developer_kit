@@ -1,0 +1,435 @@
+{
+  "version": 1,
+  "chain_id": "clrty-1",
+  "generated_at": "2026-07-02T18:25:37.400775+00:00",
+  "sections": [
+    {
+      "id": "clrty-1---moniverse",
+      "name": "CLRTY-1 / Moniverse",
+      "status": "live",
+      "labs_step": 1,
+      "sec_id": "SEC-01",
+      "description": "Read chain spec, PoC tuple, and genesis entropy. CLRTY-1 is the only execution network.",
+      "doc": "chain/index.html",
+      "source": "walkthrough"
+    },
+    {
+      "id": "clarity-wallet",
+      "name": "Clarity Wallet",
+      "status": "live",
+      "labs_step": 2,
+      "sec_id": "SEC-02",
+      "description": "Connect wallet via adapter; add network chainId 1202 (9 decimals).",
+      "doc": "../../docs/consumer_wallet_guide.md",
+      "source": "walkthrough"
+    },
+    {
+      "id": "faucet",
+      "name": "Faucet",
+      "status": "live",
+      "labs_step": 3,
+      "sec_id": "SEC-03",
+      "description": "Request test uclrty via FMA-governed faucet (non-mainnet clusters).",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "prism",
+      "name": "PRISM",
+      "status": "live",
+      "labs_step": 4,
+      "sec_id": "SEC-04",
+      "description": "Submit structured intent JSON via clrt prism query.",
+      "doc": "../../clarity-prism-cli/README.md",
+      "source": "walkthrough"
+    },
+    {
+      "id": "poc---entropybus",
+      "name": "PoC / EntropyBus",
+      "status": "live",
+      "labs_step": 5,
+      "sec_id": "SEC-05",
+      "description": "Run simulateTransaction; review FMA vector and MLX toxicity score.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "helix",
+      "name": "HELIX",
+      "status": "live",
+      "labs_step": 6,
+      "sec_id": "SEC-06",
+      "description": "Preview HELIX route and private mempool path.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "prooflab---desci",
+      "name": "ProofLab / DeSci",
+      "status": "live",
+      "labs_step": 7,
+      "sec_id": "SEC-07",
+      "description": "Execution proof and replay hash from explorer.",
+      "doc": "explorer/index.html",
+      "source": "walkthrough"
+    },
+    {
+      "id": "nsal---sets",
+      "name": "NSAL / Sets",
+      "status": "partial",
+      "labs_step": 8,
+      "sec_id": "SEC-08",
+      "description": "Query Set tier via GET /v1/sets/:address.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "quantum-skills",
+      "name": "Quantum Skills",
+      "status": "partial",
+      "labs_step": 9,
+      "sec_id": "SEC-09",
+      "description": "Run MCA/EHL skill modules from clrty CLI.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "moniverse-dao",
+      "name": "Moniverse DAO",
+      "status": "partial",
+      "labs_step": 10,
+      "sec_id": "SEC-10",
+      "description": "Snapshot vote with FMA proposal gate.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "bridge-monitor",
+      "name": "Bridge monitor",
+      "status": "partial",
+      "labs_step": 11,
+      "sec_id": "SEC-11",
+      "description": "ETH bridge telemetry via Alchemy CLI \u2014 not L1 execution.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "production-verify",
+      "name": "Production verify",
+      "status": "partial",
+      "labs_step": 12,
+      "sec_id": "SEC-13",
+      "description": "Smoke public RPC getSlot and operational dashboard.",
+      "doc": null,
+      "source": "walkthrough"
+    },
+    {
+      "id": "nexus-core",
+      "name": "CORE",
+      "status": "implemented",
+      "path": "CLRTY_SUBSTRATE",
+      "description": "Nexus module \u2014 clrty-substrate",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-skills",
+      "name": "SKILLS",
+      "status": "partial",
+      "path": "clrty-cli-core",
+      "description": "Nexus module \u2014 clrty-skills-suite",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-ai",
+      "name": "AI",
+      "status": "partial",
+      "path": "quant_stack",
+      "description": "Nexus module \u2014 vis-intelligence",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-liquidity",
+      "name": "LIQUIDITY",
+      "status": "partial",
+      "path": "helix_engine",
+      "description": "Nexus module \u2014 clrty-helix-engine",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-cli",
+      "name": "CLI",
+      "status": "implemented",
+      "path": "clarity-cli",
+      "description": "Nexus module \u2014 clrty-operator",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-commerce",
+      "name": "COMMERCE",
+      "status": "partial",
+      "path": "cortexpay_engine",
+      "description": "Nexus module \u2014 clrty-cortexpay",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-templates",
+      "name": "TEMPLATES",
+      "status": "partial",
+      "path": "neuro_templates_engine",
+      "description": "Nexus module \u2014 clrty-neuro-templates",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-docs",
+      "name": "DOCS",
+      "status": "implemented",
+      "path": "docs",
+      "description": "Nexus module \u2014 clrty-portal-docs",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-frontend",
+      "name": "FRONTEND",
+      "status": "partial",
+      "path": "frontend",
+      "description": "Nexus module \u2014 clrty-investor-ui",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "nexus-orchestrator",
+      "name": "ORCHESTRATOR",
+      "status": "partial",
+      "path": ".",
+      "description": "Nexus module \u2014 clrty-core-nexus",
+      "source": "nexus_modules"
+    },
+    {
+      "id": "product-p01",
+      "name": "HELIX Engine",
+      "status": "partial",
+      "category": "execution",
+      "html_path": "frontend/products/suite/category-i-execution/helix-engine.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#helix-engine",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p02",
+      "name": "IntentOS",
+      "status": "planned",
+      "category": "execution",
+      "html_path": "frontend/products/suite/category-i-execution/intentos.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#intentos",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p03",
+      "name": "NetZero Settlement",
+      "status": "partial",
+      "category": "execution",
+      "html_path": "frontend/products/suite/category-i-execution/netzero-settlement.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#netzero-settlement",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p04",
+      "name": "Alpha Engine",
+      "status": "partial",
+      "category": "ai",
+      "html_path": "frontend/products/suite/category-ii-ai/alpha-engine.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#alpha-engine",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p05",
+      "name": "Liquidity Oracle AI",
+      "status": "planned",
+      "category": "ai",
+      "html_path": "frontend/products/suite/category-ii-ai/liquidity-oracle-ai.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#liquidity-oracle-ai",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p06",
+      "name": "Strategy Compiler",
+      "status": "partial",
+      "category": "ai",
+      "html_path": "frontend/products/suite/category-ii-ai/strategy-compiler.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#strategy-compiler",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p07",
+      "name": "MIRRA Vault",
+      "status": "partial",
+      "category": "capital",
+      "html_path": "frontend/products/suite/category-iii-capital/mirra-vault.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#mirra-vault",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p08",
+      "name": "Synthetic Liquidity",
+      "status": "planned",
+      "category": "capital",
+      "html_path": "frontend/products/suite/category-iii-capital/synthetic-liquidity.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#synthetic-liquidity",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p09",
+      "name": "AMM 2.0",
+      "status": "planned",
+      "category": "capital",
+      "html_path": "frontend/products/suite/category-iii-capital/autonomous-market-maker.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#autonomous-market-maker",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p10",
+      "name": "SafeCore",
+      "status": "partial",
+      "category": "security",
+      "html_path": "frontend/products/suite/category-iv-security/safecore.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#safecore",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p11",
+      "name": "Proof of Clarity",
+      "status": "partial",
+      "category": "security",
+      "html_path": "frontend/products/suite/category-iv-security/proof-of-clarity.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#proof-of-clarity",
+      "source": "products_suite"
+    },
+    {
+      "id": "product-p12",
+      "name": "CLRTY API / SDK",
+      "status": "partial",
+      "category": "platform",
+      "html_path": "frontend/products/suite/category-v-platform/api-sdk.html",
+      "description": "docs/products/CLARITY_PRODUCT_SUITE.md#api-sdk",
+      "source": "products_suite"
+    },
+    {
+      "id": "wal-01",
+      "name": "Core wallet environment profile",
+      "status": "partial",
+      "sec_id": "WAL-01",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-02",
+      "name": "Mobile wallet backend profile",
+      "status": "partial",
+      "sec_id": "WAL-02",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-03",
+      "name": "Pro trader wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-03",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-04",
+      "name": "Multisig Safe wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-04",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-05",
+      "name": "Autonomous agent wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-05",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-06",
+      "name": "Developer testnet wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-06",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-07",
+      "name": "Embedded SDK wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-07",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-08",
+      "name": "Enterprise custody wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-08",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-09",
+      "name": "Institutional custody wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-09",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-10",
+      "name": "Identity-linked wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-10",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-11",
+      "name": "Commerce checkout wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-11",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-12",
+      "name": "NFT asset wallet profile",
+      "status": "partial",
+      "sec_id": "WAL-12",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-13",
+      "name": "Wallet finder by capability primitives",
+      "status": "partial",
+      "sec_id": "WAL-13",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "wal-14",
+      "name": "Unified signer backends",
+      "status": "partial",
+      "sec_id": "WAL-14",
+      "description": null,
+      "source": "clrty_sections_manifest"
+    },
+    {
+      "id": "labs-portal",
+      "name": "Clarity Fortress Portal",
+      "status": "built",
+      "labs_url": "https://dev.clrty.io/labs",
+      "sec_id": "SEC-13",
+      "source": "content_database"
+    }
+  ]
+}

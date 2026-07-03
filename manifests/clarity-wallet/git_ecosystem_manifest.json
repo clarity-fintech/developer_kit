@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "organization": "clarity-labs",
+  "repos": [
+    {
+      "id": "clarity-core",
+      "description": "Blockchain + CVE",
+      "monorepo_paths": [
+        "CLRTY_SUBSTRATE/",
+        "state_manifold/",
+        "mvm_execution/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-wallets",
+      "description": "Wallet implementations",
+      "monorepo_paths": [
+        "clarity-wallet/",
+        "clrty-wallet/",
+        "clrty-signer/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-sdk",
+      "description": "Developer SDKs",
+      "monorepo_paths": [
+        "sdk/",
+        "clarity-wallet/src/sdk.ts"
+      ],
+      "tier": "public"
+    },
+    {
+      "id": "clarity-helix",
+      "description": "HELIX execution",
+      "monorepo_paths": [
+        "helix_engine/",
+        "arbitrage_core/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-data",
+      "description": "Data aggregation",
+      "monorepo_paths": [
+        "clrty-intelligence/",
+        "data_lake_pipeline/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-api",
+      "description": "Public APIs",
+      "monorepo_paths": [
+        "clrty-api/",
+        "clrty-rpc/",
+        "clrty-dx/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-devtools",
+      "description": "CLI + debugger",
+      "monorepo_paths": [
+        "clarity-cli/",
+        "clrty-cli-core/",
+        "scripts/"
+      ],
+      "tier": "public"
+    },
+    {
+      "id": "clarity-agents",
+      "description": "Autonomous agents",
+      "monorepo_paths": [
+        "cortexpay_engine/",
+        "neuro_templates_engine/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-docs",
+      "description": "Documentation",
+      "monorepo_paths": [
+        "docs/",
+        "clarity-wallet/docs/",
+        "frontend/docs/"
+      ],
+      "tier": "public"
+    },
+    {
+      "id": "clarity-infra",
+      "description": "Infrastructure",
+      "monorepo_paths": [
+        ".github/workflows/",
+        "Makefile"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-ui",
+      "description": "Frontend UI",
+      "monorepo_paths": [
+        "clrty-cli-ui/",
+        "clarity-wallet/app/",
+        "frontend/"
+      ],
+      "tier": "public"
+    },
+    {
+      "id": "clarity-x402",
+      "description": "Payment monetization",
+      "monorepo_paths": [
+        "settlement/",
+        "cortexpay_engine/"
+      ],
+      "tier": "semi-private"
+    },
+    {
+      "id": "clarity-examples",
+      "description": "Starter templates",
+      "monorepo_paths": [
+        "clarity-examples/"
+      ],
+      "tier": "public"
+    }
+  ]
+}

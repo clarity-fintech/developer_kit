@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CLRTY Explorer — Clarity Fortress</title>
+  <link rel="stylesheet" href="../labs.css" />
+</head>
+<body class="labs-page">
+  <header class="labs-hero">
+    <h1>Explorer (Fortress)</h1>
+    <p>Execution-native view — production at explorer.clarity-fintech.com</p>
+    <nav class="labs-nav"><a href="../index.html">← Fortress</a></nav>
+  </header>
+  <main>
+    <p id="wallet-status" style="color:#94a3b8">Wallet: not connected</p>
+    <button id="connect-btn" class="labs-step-action" type="button">Connect (stub)</button>
+    <button id="slot-btn" class="labs-step-action" type="button">getSlot</button>
+    <button id="fma-btn" class="labs-step-action" type="button">FMA validate</button>
+    <button id="status-btn" class="labs-step-action" type="button">API status</button>
+    <pre id="explorer-out" style="margin-top:1rem;color:#94a3b8;font-size:0.85rem"></pre>
+  </main>
+  <script src="../../shared/labs-wallet-stub.js"></script>
+  <script src="../../shared/labs-api.js"></script>
+  <script>
+    const out = document.getElementById('explorer-out');
+    document.getElementById('connect-btn').onclick = async function () {
+      await LabsWalletStub.connect();
+      document.getElementById('wallet-status').textContent = LabsWalletStub.statusLabel();
+    };
+    document.getElementById('slot-btn').onclick = async () => {
+      out.textContent = JSON.stringify(await ClarityLabsApi.getSlot(), null, 2);
+    };
+    document.getElementById('status-btn').onclick = async () => {
+      out.textContent = JSON.stringify(await ClarityLabsApi.getStatus(), null, 2);
+    };
+    document.getElementById('fma-btn').onclick = async () => {
+      const res = await fetch(ClarityLabsApi.restBase + '/v1/fma/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ s: 0.9, e: 0.9, n: 0.85, c: 0.95, x: 0.15 }),
+      });
+      const data = await res.json();
+      out.textContent = JSON.stringify({ fma_root: data.fma_root, verdict: data.verdict, score: data.score }, null, 2);
+    };
+  </script>
+</body>
+</html>

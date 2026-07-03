@@ -1,0 +1,9 @@
+{
+  "id": "clarity-sdk",
+  "description": "Developer SDKs",
+  "monorepo_paths": [
+    "sdk/",
+    "clarity-wallet/src/sdk.ts"
+  ],
+  "virtual_org": "clarity-labs"
+}

@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package clrty_execution.v1;
+
+option go_package = "github.com/clrty/clrty/sdk/go/clrty_execution/v1";
+
+// Sniper execution service — REST v1 is the external surface; gRPC Phase 2.
+service SniperService {
+  rpc Quote(SniperQuoteRequest) returns (SniperQuoteResponse);
+  rpc Execute(SniperExecuteRequest) returns (SniperExecuteResponse);
+  rpc Status(SniperStatusRequest) returns (SniperStatusResponse);
+}
+
+message SniperQuoteRequest {
+  string pair = 1;
+  string amount = 2;
+  uint32 slippage_bps = 3;
+  repeated string venues = 4;
+  string customer_id = 5;
+}
+
+message SniperQuoteResponse {
+  string quote_id = 1;
+  string pair = 2;
+  uint64 amount = 3;
+  uint32 slippage_bps = 4;
+  repeated string venues = 5;
+  uint32 spread_bps = 6;
+  uint32 performance_fee_bps = 7;
+  uint64 performance_fee = 8;
+  uint32 tax_bps = 9;
+  uint64 tax_total = 10;
+  uint64 expires_at = 11;
+}
+
+message SniperExecuteRequest {
+  string quote_id = 1;
+  bool signed = 2;
+  string customer_id = 3;
+}
+
+message SniperExecuteResponse {
+  string trade_id = 1;
+  string status = 2;
+  bool dry_run = 3;
+  string message = 4;
+}
+
+message SniperStatusRequest {
+  string trade_id = 1;
+}
+
+message SniperStatusResponse {
+  string trade_id = 1;
+  string quote_id = 2;
+  string status = 3;
+  bool dry_run = 4;
+  bool simulated = 5;
+  string customer_id = 6;
+  uint64 submitted_at = 7;
+}

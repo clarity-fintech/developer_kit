@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "generated": true,
+  "courses": [
+    {
+      "id": "DEV-COURSE-01",
+      "slug": "quickstart",
+      "title": "CLRTY Quickstart",
+      "doc": "frontend/docs/content/build/quickstart.md"
+    },
+    {
+      "id": "DEV-COURSE-02",
+      "slug": "bootcamp",
+      "title": "CLARITY Bootcamp",
+      "doc": "frontend/docs/content/build/bootcamp/index.md"
+    },
+    {
+      "id": "DEV-COURSE-03",
+      "slug": "bytes",
+      "title": "CLRTY Bytes",
+      "doc": "frontend/docs/content/build/cookbook/index.md"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "DEV-CHECK-01",
+      "item": "Install CLI and verify genesis",
+      "command": "clrty node genesis-verify"
+    },
+    {
+      "id": "DEV-CHECK-02",
+      "item": "First deploy to devnet",
+      "command": "clrty dev verify-setup"
+    },
+    {
+      "id": "DEV-CHECK-03",
+      "item": "Register wallet",
+      "command": "clrty wallet register <addr>"
+    },
+    {
+      "id": "DEV-CHECK-04",
+      "item": "Devnet integration test",
+      "command": "clrty rpc call getHealth"
+    },
+    {
+      "id": "DEV-CHECK-05",
+      "item": "Security review",
+      "command": "make audit-verify"
+    },
+    {
+      "id": "DEV-CHECK-06",
+      "item": "Mainnet readiness",
+      "command": "make verify-stage-5"
+    }
+  ]
+}

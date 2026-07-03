@@ -1,0 +1,10 @@
+{
+  "id": "clarity-wallets",
+  "description": "Wallet implementations",
+  "monorepo_paths": [
+    "clarity-wallet/",
+    "clrty-wallet/",
+    "clrty-signer/"
+  ],
+  "virtual_org": "clarity-labs"
+}
