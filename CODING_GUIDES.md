@@ -9,6 +9,8 @@ Canonical guides live in the GitBook publish repo:
 | Wallet backend routing | https://github.com/clarity-fintech/gitbook/blob/main/developer/guides/wallet-backend-routing.md |
 | Moniversive coding guide | https://github.com/clarity-fintech/gitbook/blob/main/moniversive/guides/coding-guide.md |
 | Full MIS space | https://github.com/clarity-fintech/gitbook/tree/main/moniversive |
+| Static ML backlinks | https://github.com/clarity-fintech/gitbook/blob/main/moniversive/guides/static-ml-backlinks.md |
+| Static ML learning path | https://github.com/clarity-fintech/gitbook/blob/main/moniversive/learn/static-ml-learning-path.md |
 
 Kernel: see [MIS_KERNEL.md](./MIS_KERNEL.md) and https://github.com/clarity-fintech/CLRTY-MIS-Kernel
 
