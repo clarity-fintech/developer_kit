@@ -52,3 +52,7 @@ Developers should not adapt to infrastructure. Infrastructure should adapt to de
 Programmable wallets, AI-powered hedge funds, private trading systems, payment infrastructure, compliance-ready fintech apps, and autonomous capital allocators.
 
 > If it involves capital, logic, or execution, you can build it on CLRTY-1.
+
+## Coding guides
+
+See [CODING_GUIDES.md](./CODING_GUIDES.md) (Clarity-Fintech GitBook).
